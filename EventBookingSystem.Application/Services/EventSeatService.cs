@@ -63,7 +63,7 @@ public class EventSeatService : IEventSeatService
         }
         return false;
     }
-    public bool CancleBooking(int seatId) 
+    public bool CancelBooking(int seatId) 
     {
         var seat = _eventSeatRepository.GetById(seatId);
         if (seat.IsAvailable != true)

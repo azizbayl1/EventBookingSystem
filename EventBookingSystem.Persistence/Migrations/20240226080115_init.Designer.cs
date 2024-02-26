@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EventBookingSystem.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240214101553_init")]
+    [Migration("20240226080115_init")]
     partial class init
     {
         /// <inheritdoc />

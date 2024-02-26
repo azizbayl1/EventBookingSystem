@@ -9,5 +9,5 @@ public interface IEventSeatService
     List<EventSeatResponseDTO> GetSeatsByEventId(int eventId);
     List<ParticipantResponseDTO> GetMyBookings();
     bool BookSeat(int seatId);
-    bool CancleBooking(int seatId);
+    bool CancelBooking(int seatId);
 }

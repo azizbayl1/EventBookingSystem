@@ -6,20 +6,10 @@ namespace EventBookingSystem.Persistence.Context;
 
 public class AppDbContext : DbContext
 {
-    //public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-    //{
-    //    optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=EventBookingSystemDb;Integrated Security=True;TrustServerCertificate=True;");
-    //    optionsBuilder.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"));
-    //}
-
-    //public AppDbContext()
-    //{
-    //}
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=EventBookingSystem;Username=postgres;Password=Ps11");
-        optionsBuilder.UseLazyLoadingProxies();
+        options.UseNpgsql("Server=localhost;Port=5432;Database=EventBookingSystem;Username=postgres;Password=Ps11");
+        options.UseLazyLoadingProxies();
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -28,4 +18,10 @@ public class AppDbContext : DbContext
         base.OnModelCreating(modelBuilder);
         modelBuilder.Seeder();
     }
+
+    //public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    //{
+    //    options.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=EventBookingSystemDb;Integrated Security=True;TrustServerCertificate=True;");
+    //    options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection"));
+    //}
 }

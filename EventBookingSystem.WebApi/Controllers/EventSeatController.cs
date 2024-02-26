@@ -40,11 +40,11 @@ public class EventSeatController : ControllerBase
         return BadRequest("Seat is not available");
     }
 
-    [Route("CancleBooking")]
+    [Route("CancelBooking")]
     [HttpPut]
-    public IActionResult CancleBooking(int seatId)
+    public IActionResult CancelBooking(int seatId)
     {
-        if (_eventSeatService.CancleBooking(seatId))
+        if (_eventSeatService.CancelBooking(seatId))
         {
             return Ok("Seat canceled successfully");
         }
