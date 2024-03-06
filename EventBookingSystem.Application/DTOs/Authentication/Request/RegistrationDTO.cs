@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace EventBookingSystem.Application.DTOs.Authentication.Request;
+﻿namespace EventBookingSystem.Application.DTOs.Authentication.Request;
 
 public class RegistrationDTO
 {
